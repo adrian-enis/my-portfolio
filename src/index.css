@@ -1,3 +1,73 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+body {
+  @apply font-inter;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {  
+  @apply font-playfair;
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translate(10px, -10px);
+  }
+  50% {
+    transform: translate(0,-20px);
+  }
+  75% {
+    transform: translate(-10px, -10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+ 
+.bubble {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index: 0;
+  opacity: 1;
+  animation: float  ease-in-out infinite;
+  filter: blur(5rem);
+}
+.bubble:nth-child(1) {
+  top: 0%;
+  left: 0%;
+  fill: #c9a227 ;
+  animation-duration: 5s;
+}
+.bubble:nth-child(2) {
+  top: 0%;
+  right: 0%;
+  fill: #c9a227;
+  animation-duration: 10s;
+}
+.bubble:nth-child(3) {
+  bottom: 0%;
+  left: 0%;
+  fill: #c9a227;
+  animation-duration: 12s;
+}
+.bubble:nth-child(4) {
+  bottom: 0%;
+  right: 0%;
+  fill: #c9a227;
+  animation-duration: 14s;
+}
+.bubble:nth-child(5) {
+  left: 25%;
+  bottom: 20%;
+  fill: #fad643;
+  animation-duration: 6s;
+}
+
